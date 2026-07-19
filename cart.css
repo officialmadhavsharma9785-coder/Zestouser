@@ -1,0 +1,135 @@
+/* ===========================
+   ZESTO PREMIUM CART UI
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0B3D0B,#2E7D32);
+    min-height:100vh;
+    padding:20px;
+}
+
+.cart-container{
+    max-width:450px;
+    margin:auto;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.cart-header a{
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
+}
+
+.cart-header h2{
+    font-size:26px;
+}
+
+.cart-item{
+    background:#fff;
+    border-radius:20px;
+    padding:18px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    margin-bottom:20px;
+}
+
+.cart-item img{
+    width:90px;
+    height:90px;
+    border-radius:16px;
+    object-fit:cover;
+    background:#E8F5E9;
+}
+
+.item-details{
+    flex:1;
+}
+
+.item-details h3{
+    color:#222;
+    margin-bottom:8px;
+}
+
+.item-details p{
+    color:#2E7D32;
+    font-size:18px;
+    font-weight:700;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:12px;
+}
+
+.quantity button{
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:#2E7D32;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.quantity span{
+    font-size:18px;
+    font-weight:600;
+}
+
+.bill-card{
+    background:#fff;
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.bill-row{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0;
+    color:#444;
+}
+
+.total{
+    font-size:20px;
+    font-weight:700;
+    color:#222;
+}
+
+.checkout-btn{
+    width:100%;
+    margin-top:20px;
+    padding:16px;
+    border:none;
+    border-radius:16px;
+    background:#2E7D32;
+    color:#fff;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.checkout-btn:hover{
+    background:#1B5E20;
+    transform:translateY(-2px);
+  }
