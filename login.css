@@ -181,3 +181,21 @@ transform:translateY(0);
 transform:translateY(-10px);
 }
                      }
+html,
+body{
+    margin:0 !important;
+    padding:0 !important;
+    width:100%;
+    min-height:100vh;
+    background:linear-gradient(180deg,#0b4d16 0%,#2E7D32 100%) !important;
+    background-attachment:fixed;
+}
+
+.login-container{
+    min-height:100vh;
+    background:transparent !important;
+}
+
+.login-top{
+    background:transparent !important;
+  }
