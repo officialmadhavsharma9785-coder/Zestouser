@@ -1,4 +1,4 @@
-/* login.css */
+/* ===== ZESTO LOGIN UI ===== */
 
 *{
 margin:0;
@@ -8,17 +8,19 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f7f5;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+background:linear-gradient(135deg,#0B3D0B,#2E7D32);
+padding:20px;
+overflow:hidden;
 }
 
 .login-container{
 width:100%;
 max-width:420px;
-padding:20px;
+animation:fadeIn .8s ease;
 }
 
 .login-top{
@@ -29,55 +31,68 @@ margin-bottom:25px;
 .logo{
 width:90px;
 height:90px;
-border-radius:20px;
-margin-bottom:10px;
+border-radius:22px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+animation:float 3s ease-in-out infinite;
 }
 
 .login-top h1{
-color:#2E7D32;
+margin-top:12px;
 font-size:34px;
 font-weight:700;
+color:#fff;
 }
 
 .login-top p{
-color:#777;
-font-size:15px;
+color:#E8F5E9;
+margin-top:5px;
 }
 
 .login-card{
-background:#fff;
-padding:25px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(15px);
+border-radius:24px;
+padding:28px;
+box-shadow:0 20px 40px rgba(0,0,0,.20);
 }
 
 .login-card h2{
-margin-bottom:8px;
+font-size:28px;
+margin-bottom:6px;
 }
 
 .login-card p{
-margin-bottom:20px;
 color:#666;
+margin-bottom:20px;
 }
 
 .input-box{
 display:flex;
 align-items:center;
-background:#f3f3f3;
-border-radius:12px;
-padding:14px;
-margin-bottom:18px;
+background:#F5F5F5;
+border-radius:16px;
+padding:15px;
+margin-bottom:16px;
+border:2px solid transparent;
+transition:.3s;
+}
+
+.input-box:hover,
+.input-box:focus-within{
+border-color:#2E7D32;
+background:#fff;
 }
 
 .input-box i{
 color:#2E7D32;
 margin-right:10px;
+font-size:18px;
 }
 
 .input-box input{
 border:none;
 outline:none;
-background:transparent;
+background:none;
 width:100%;
 font-size:15px;
 }
@@ -90,40 +105,47 @@ margin-bottom:18px;
 .forgot a{
 text-decoration:none;
 color:#2E7D32;
-font-size:14px;
+font-weight:600;
 }
 
 .login-btn{
 width:100%;
 padding:15px;
+border:none;
+border-radius:16px;
 background:#2E7D32;
 color:#fff;
-border:none;
-border-radius:12px;
-font-size:16px;
-font-weight:600;
+font-size:17px;
+font-weight:700;
 cursor:pointer;
+transition:.3s;
 }
 
 .login-btn:hover{
 background:#1B5E20;
+transform:translateY(-2px);
 }
 
 .or{
 text-align:center;
 margin:20px 0;
+color:#888;
 font-weight:600;
-color:#777;
 }
 
 .google-btn{
 width:100%;
 padding:15px;
-background:#fff;
+border-radius:16px;
 border:1px solid #ddd;
-border-radius:12px;
+background:#fff;
+font-size:16px;
 cursor:pointer;
-font-size:15px;
+transition:.3s;
+}
+
+.google-btn:hover{
+background:#f5f5f5;
 }
 
 .signup-link{
@@ -132,7 +154,27 @@ margin-top:20px;
 }
 
 .signup-link a{
-color:#2E7D32;
 text-decoration:none;
-font-weight:600;
-  }
+color:#2E7D32;
+font-weight:700;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+                     }
