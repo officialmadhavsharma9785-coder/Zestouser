@@ -1,0 +1,124 @@
+/* ===========================
+   ZESTO PROFILE UI
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0B3D0B,#2E7D32);
+    padding:25px;
+}
+
+.profile-container{
+    max-width:420px;
+    margin:auto;
+}
+
+.profile-header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.profile-image{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:45px;
+    color:#2E7D32;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+.profile-header h2{
+    color:#fff;
+    margin-top:18px;
+    font-size:28px;
+}
+
+.profile-header p{
+    color:#E8F5E9;
+    margin-top:8px;
+}
+
+.edit-btn{
+    margin-top:18px;
+    border:none;
+    background:#fff;
+    color:#2E7D32;
+    padding:14px 22px;
+    border-radius:14px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.menu-card{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
+}
+
+.menu-card a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+    text-decoration:none;
+    color:#222;
+    border-bottom:1px solid #eee;
+}
+
+.menu-card a:last-child{
+    border-bottom:none;
+}
+
+.menu-card span{
+    flex:1;
+    margin-left:15px;
+}
+
+.menu-card a i:first-child{
+    color:#2E7D32;
+    width:24px;
+}
+
+.menu-card a:hover{
+    background:#F4FFF5;
+}
+
+.logout{
+    color:#D32F2F !important;
+}
+
+.logout i:first-child{
+    color:#D32F2F !important;
+}
+
+@media(max-width:480px){
+
+body{
+padding:18px;
+}
+
+.profile-image{
+width:95px;
+height:95px;
+font-size:40px;
+}
+
+.profile-header h2{
+font-size:24px;
+}
+
+      }
