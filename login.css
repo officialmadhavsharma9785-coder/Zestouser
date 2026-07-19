@@ -1,0 +1,138 @@
+/* login.css */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-container{
+width:100%;
+max-width:420px;
+padding:20px;
+}
+
+.login-top{
+text-align:center;
+margin-bottom:25px;
+}
+
+.logo{
+width:90px;
+height:90px;
+border-radius:20px;
+margin-bottom:10px;
+}
+
+.login-top h1{
+color:#2E7D32;
+font-size:34px;
+font-weight:700;
+}
+
+.login-top p{
+color:#777;
+font-size:15px;
+}
+
+.login-card{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.login-card h2{
+margin-bottom:8px;
+}
+
+.login-card p{
+margin-bottom:20px;
+color:#666;
+}
+
+.input-box{
+display:flex;
+align-items:center;
+background:#f3f3f3;
+border-radius:12px;
+padding:14px;
+margin-bottom:18px;
+}
+
+.input-box i{
+color:#2E7D32;
+margin-right:10px;
+}
+
+.input-box input{
+border:none;
+outline:none;
+background:transparent;
+width:100%;
+font-size:15px;
+}
+
+.forgot{
+text-align:right;
+margin-bottom:18px;
+}
+
+.forgot a{
+text-decoration:none;
+color:#2E7D32;
+font-size:14px;
+}
+
+.login-btn{
+width:100%;
+padding:15px;
+background:#2E7D32;
+color:#fff;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+.login-btn:hover{
+background:#1B5E20;
+}
+
+.or{
+text-align:center;
+margin:20px 0;
+font-weight:600;
+color:#777;
+}
+
+.google-btn{
+width:100%;
+padding:15px;
+background:#fff;
+border:1px solid #ddd;
+border-radius:12px;
+cursor:pointer;
+font-size:15px;
+}
+
+.signup-link{
+text-align:center;
+margin-top:20px;
+}
+
+.signup-link a{
+color:#2E7D32;
+text-decoration:none;
+font-weight:600;
+  }
