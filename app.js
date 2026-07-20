@@ -111,16 +111,39 @@ querySnapshot.forEach((doc) => {
 
     const food = doc.data();
 
-    foodList.innerHTML += `
-        <div class="restaurant-card">
-            <div class="restaurant-info">
-                <h3>${food.name}</h3>
-                <p>₹ ${food.price}</p>
-                <span>${food.category}</span>
-                <small>${food.description}</small>
-            </div>
-        </div>
-    `;
+    let image = "images/pizza.jpg";
+
+if (food.category === "Burger") {
+    image = "images/burger.jpg";
+} else if (food.category === "Biryani") {
+    image = "images/biryani.jpg";
+} else if (food.category === "Momos") {
+    image = "images/momos.jpg";
+} else if (food.category === "Drinks") {
+    image = "images/drinks.jpg";
+}
+
+foodList.innerHTML += `
+<div class="food-card">
+
+<img src="${image}" alt="${food.name}">
+
+<div class="food-info">
+
+<h3>${food.name}</h3>
+
+<p class="food-price">₹${food.price}</p>
+
+<p>⭐ 4.8 • ${food.category}</p>
+
+<p>${food.description}</p>
+
+<button class="add-btn">🛒 Add to Cart</button>
+
+</div>
+
+</div>
+`;
 
 });
 
