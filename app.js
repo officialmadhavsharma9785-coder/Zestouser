@@ -93,13 +93,28 @@ document.querySelectorAll(".bottom-nav a").forEach(btn => {
 
 console.log("Zesto Loaded Successfully");
 
-// Firebase Test
-async function loadRestaurants() {
-    const querySnapshot = await getDocs(collection(db, "restaurants"));
+// =========================
+// FIREBASE FOODS
+// =========================
 
-    querySnapshot.forEach((doc) => {
-        console.log(doc.id, doc.data());
-    });
+async function loadFoods() {
+
+    try {
+
+        const querySnapshot = await getDocs(collection(db, "foods"));
+
+        querySnapshot.forEach((doc) => {
+
+            console.log(doc.data());
+
+        });
+
+    } catch (error) {
+
+        console.log("Firebase Error:", error);
+
+    }
+
 }
 
-loadRestaurants();
+loadFoods();
