@@ -103,11 +103,26 @@ async function loadFoods() {
 
         const querySnapshot = await getDocs(collection(db, "foods"));
 
-        querySnapshot.forEach((doc) => {
+        const foodList = document.getElementById("foodList");
 
-            console.log(doc.data());
+foodList.innerHTML = "";
 
-        });
+querySnapshot.forEach((doc) => {
+
+    const food = doc.data();
+
+    foodList.innerHTML += `
+        <div class="restaurant-card">
+            <div class="restaurant-info">
+                <h3>${food.name}</h3>
+                <p>₹ ${food.price}</p>
+                <span>${food.category}</span>
+                <small>${food.description}</small>
+            </div>
+        </div>
+    `;
+
+});
 
     } catch (error) {
 
