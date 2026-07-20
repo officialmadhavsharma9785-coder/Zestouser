@@ -1,3 +1,6 @@
+import { db } from "./firebase.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
 // =========================
 // ZESTO APP.JS
 // =========================
@@ -89,3 +92,14 @@ document.querySelectorAll(".bottom-nav a").forEach(btn => {
 });
 
 console.log("Zesto Loaded Successfully");
+
+// Firebase Test
+async function loadRestaurants() {
+    const querySnapshot = await getDocs(collection(db, "restaurants"));
+
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, doc.data());
+    });
+}
+
+loadRestaurants();
